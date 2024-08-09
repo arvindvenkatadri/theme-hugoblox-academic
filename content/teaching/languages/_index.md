@@ -1,7 +1,8 @@
 ---
-title: Teaching
-summary: My courses
+title: Languages
+summary: My Language courses
 type: book
+weight: 20
 
 cascade:
   - _target:
@@ -11,12 +12,12 @@ cascade:
 
 sections:
   - block: collection
-    id: teaching
+    id: languages
     content:
-      title: Teaching
+      title: Languages
       filters:
         folders:
-          - teaching
+          - languages
     design:
       view: article-grid
       columns: 2

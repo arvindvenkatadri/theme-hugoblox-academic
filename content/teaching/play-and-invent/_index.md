@@ -1,8 +1,8 @@
 ---
-title: Teaching
-summary: My courses
+title: Play and Invent
+summary: My Play and Invent Course
 type: book
-
+weight: 10
 cascade:
   - _target:
       kind: page
@@ -11,12 +11,12 @@ cascade:
 
 sections:
   - block: collection
-    id: teaching
+    id: play-and-invent
     content:
-      title: Teaching
+      title: Play and Invent
       filters:
         folders:
-          - teaching
+          - play-and-invent/modules
     design:
       view: article-grid
       columns: 2

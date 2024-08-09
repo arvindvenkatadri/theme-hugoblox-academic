@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: Arvind V.
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: ""
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Arvind
+last_name: V.
 
 # Status emoji
 status:
@@ -20,69 +20,48 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Adjunct Professor
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: Dayanand Sagar University
+    url: https://www.dsu.edu.in/academics/schools/management-studies
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: 'mailto:arvind.venkatadri@gmail.com'
     label: E-mail Me
   - icon: brands/x
-    url: https://twitter.com/GetResearchDev
+    url: https://twitter.com/arvind_v
   - icon: brands/instagram
     url: https://www.instagram.com/
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/arvindvenkatadri
   - icon: brands/linkedin
-    url: https://www.linkedin.com/
+    url: https://www.linkedin.com/in/arvindvenkatadri
   - icon: academicons/google-scholar
     url: https://scholar.google.com/
   - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://orcid.org/0009-0004-3749-4021
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - TRIZ
+  - Inventive Problem Solving
+  - Data Science
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: MEng Electronics and Communications
+    institution: IIT Roorkee, Roorkee, INDIA
+    date_start: 1985-06-01
+    date_end: 1987-01-31
     summary: |
       Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
     button:
       text: 'Read Thesis'
       url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.8/4.0
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
   - position: Director of Cloud Infrastructure
     company_name: GenCoin
@@ -144,10 +123,10 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  # - name: Chinese
+  #   percent: 75
+  # - name: Portuguese
+  #   percent: 25
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -183,4 +162,4 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+To Be Written.
