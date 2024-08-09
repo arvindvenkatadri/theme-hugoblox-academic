@@ -4,9 +4,9 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: Hugo Academic CV Theme
+title: Arvind V
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://tyto-alba.netlify.app'
 
 ############################
 ## LANGUAGE
@@ -49,6 +49,9 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
+  goldmark:
+    renderer:
+      unsafe: true
 security:
   _merge: deep
 sitemap:
