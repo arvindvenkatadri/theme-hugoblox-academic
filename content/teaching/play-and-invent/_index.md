@@ -3,6 +3,7 @@ title: Play and Invent
 summary: My Play and Invent Course
 type: book
 weight: 10
+
 cascade:
   - _target:
       kind: page
@@ -16,7 +17,7 @@ sections:
       title: Play and Invent
       filters:
         folders:
-          - play-and-invent/modules
+          - play-and-invent
     design:
       view: article-grid
       columns: 2

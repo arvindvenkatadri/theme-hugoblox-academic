@@ -4,7 +4,18 @@ author: "Arvind V"
 date: "2024-08-09"
 output: md_document
 type: docs
-weight: 10
+toc: TRUE
+weight: 20
+links:
+  - icon_pack: hb-brands
+    icon: twitter
+    name: Follow
+    url: 'https://twitter.com/arvind_v'
+  - icon_pack: fab
+    icon: pdf
+    name: Slides
+    url: 'publication/conference-paper/conference-paper.pdf'
+slides: example-slides
 ---
 
 
@@ -37,3 +48,9 @@ You can also embed plots, for example:
 <img src="{{< blogdown/postref >}}index_files/figure-html/pressure-1.png" width="672" />
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Embedding Presentations from slides.com
+
+<iframe src="https://slides.com/arvindvenkatadri/minimal/embed" width="576" height="420" title="Minimal" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+

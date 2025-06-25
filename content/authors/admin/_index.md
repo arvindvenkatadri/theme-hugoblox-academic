@@ -20,12 +20,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Adjunct Professor
+role: External Faculty
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Dayanand Sagar University
-    url: https://www.dsu.edu.in/academics/schools/management-studies
+  - name: Srishti Manipal Institute of Art and Design
+    url: https://srishtimanipalinstitute.in/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -50,6 +50,8 @@ interests:
   - TRIZ
   - Inventive Problem Solving
   - Data Science
+  - Creative Coding
+  - Reading and Literature
 
 education:
   - area: MEng Electronics and Communications
@@ -57,7 +59,7 @@ education:
     date_start: 1985-06-01
     date_end: 1987-01-31
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+      Thesis on _Adaptive Equalization Algorithms_. 
     button:
       text: 'Read Thesis'
       url: 'https://example.com'

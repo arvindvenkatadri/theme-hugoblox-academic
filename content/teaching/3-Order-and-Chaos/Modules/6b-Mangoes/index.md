@@ -1,0 +1,652 @@
+---
+title: "\U0001F579 Eating Mangoes with Hamlet"
+author: "Arvind Venkatadri"
+date: "2024-08-12"
+weight: 75
+type: book
+external_link: ""
+image:
+  caption: Tom und Nicki Löschner on Pixabay
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Hamlet
+- Hypothesis
+- Design of Experiments
+- PPDAC Workflow
+- Sampling
+- Randomization
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+#### Hamlet is also, yeah, I mean,… like us! Random!!
+
+<figure>
+<img src="rural-survey.jpg" alt="Photo by Gabriella Clare Marino on Unsplash" />
+<figcaption aria-hidden="true">Photo by <a href="https://unsplash.com/@gabiontheroad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gabriella Clare Marino</a> on <a href="https://unsplash.com/photos/a-group-of-people-standing-in-the-water-5tQ-2o7J86E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
+</figure>
+
+## Introduction
+
+{{% youtube "EmjWIMMtjDc" %}} <br>
+
+Let us read the famous nunnery scene from <u>[**Hamlet: To be or Not to
+be**…](https://www.nosweatshakespeare.com/quotes/hamlet-to-be-or-not-to-be/)</u>
+
+<table style="width:90%;">
+<caption>Hamlet’s ‘To Be Or Not To Be’ Speech, Act 3 Scene 1</caption>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shakespeare</th>
+<th>Plain English (hopefully)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>To be, or not to be: that is
+the question:</td>
+<td>The first six words of the
+soliloquy establish a
+balance. There is a direct
+opposition – to be, or not to
+be. Hamlet is thinking about
+life and death and pondering
+a state of being versus a
+state of not being – being
+alive and being dead.</td>
+</tr>
+<tr class="even">
+<td>Whether ’tis nobler in the
+mind to suffer<br />
+<em>The slings and arrows of
+outrageous fortune</em>,<br />
+Or to take arms against a <em>sea
+of troubles</em>,<br />
+And by opposing end them?</td>
+<td>The balance continues with a
+consideration of the way one
+deals with life and death.
+Life is a lack of power: the
+living are at the mercy of
+<em>the blows of outrageous
+fortune</em>. Should we <em>nobly
+suffer</em> or should we <em>take
+arms and fight</em> against these
+random things?</td>
+</tr>
+<tr class="odd">
+<td>To die: to sleep;<br />
+No more; and by a sleep to say
+we end<br />
+The heart-ache and the
+<em>thousand natural shocks</em><br />
+That flesh is heir to, ’tis a
+consummation<br />
+Devoutly to be wish’d.</td>
+<td><p>The only action one can take
+against the things he lists
+among those blows is to end
+one’s life.</p>
+<p>That’s the only way of
+opposing them. The ‘sleep of
+death’ is therefore
+empowering: killing oneself
+is a way of taking action,
+taking up arms, opposing and
+defeating the slings and
+arrows of outrageous fortune.
+Living is a passive state;
+dying is an active state.</p></td>
+</tr>
+<tr class="even">
+<td>To die, to sleep;<br />
+To sleep: perchance to dream:
+ay, there’s the rub;<br />
+For in that sleep of death
+what dreams may come<br />
+When we have shuffled off this
+mortal coil,<br />
+Must give us pause: there’s
+the respect<br />
+That makes calamity of so long
+life;<br />
+For who would bear the <em>whips
+and scorns of time</em>,<br />
+The oppressor’s wrong, the
+proud man’s contumely,<br />
+The pangs of despised love,
+the law’s delay,<br />
+The insolence of office and
+the spurns<br />
+That patient merit of the
+unworthy takes,<br />
+When he himself might his
+quietus make<br />
+With a bare bodkin? who would
+fardels bear,<br />
+To <em>grunt and sweat under a
+weary life</em>,</td>
+<td><p>Death is something desirable
+– devoutly to be wished, a
+consummation – a perfect
+closure. It’s nothing more
+than a sleep.</p>
+<p>But there’s a catch, which
+Hamlet calls a rub. A ‘rub’
+is a bowls term meaning an
+obstacle on the bowls lawn
+that diverts the bowl, so the
+fear of the life hereafter is
+the obstacle that makes us
+pause and perhaps change the
+direction of our thinking.</p>
+<p>We don’t control our dreams
+so what dreams may come in
+that sleep in which we have
+shuffled off all the fuss and
+bother of life? He uses the
+term ‘<a href="h%20%20t%20t%20ps:%20//n%20os%20w%20eat%20s%20hakes%20peare%20.co%20%2%200%20m%20/%20q%20u%20o%20%20t%20es/famous/mortal-coil/">mortal coi
+l</a>,’
+which is an Elizabethan word
+for a big fuss. With that
+thought, Hamlet stops to
+reconsider. What will happen
+when we have discarded all
+the hustle and bustle of
+life?</p></td>
+</tr>
+<tr class="odd">
+<td>But that the <em>dread of
+something</em> after death,<br />
+The <em>undiscover’d country</em>
+from whose bourn<br />
+No traveller returns, <em>puzzles
+the will</em><br />
+And makes us rather bear those
+<em>ills we have</em><br />
+Than fly to others that we
+know not of?</td>
+<td><p><em>The problem with the
+proposition</em> is that the
+sleep of death is unknown and
+could be worse than life.</p>
+<p>Hamlet now lets his
+imagination wander on the
+subject of the voyages of
+discovery and the exploratory
+expeditions. Dying is like
+crossing the border between
+known and unknown geography.
+One is likely to be lost in
+that unmapped place, from
+which one would never return.
+The implication is that there
+may be unimagined horrors in
+that land.</p></td>
+</tr>
+<tr class="even">
+<td><p>Thus conscience does make
+cowards of us all;<br />
+And thus the native hue of
+resolution<br />
+Is sicklied o’er with the pale
+cast of thought,<br />
+And <em>enterprises of great pith
+and moment</em><br />
+With this regard their
+currents turn awry,<br />
+And lose <em>the name of action</em>.</p>
+<p><br />
+</p></td>
+<td><p>But there is more to it than
+that. It is not just about
+killing himself but also
+about the mission he is on –
+to avenge his father’s death
+by killing his father’s
+murderer. Throughout the
+action of the play, he makes
+excuses for not killing him
+and turns away when he has
+the chance. ‘Conscience does
+make cowards of us all.’
+Convention demands that he
+kill Claudius but murder is a
+sin and that conflict is the
+core of the play.</p>
+<p>At the end of the soliloquy,
+he pulls himself out of this
+reflective mode by deciding
+that too much thinking about
+it is the thing that will
+prevent the action he has to
+rise to.</p></td>
+</tr>
+<tr class="odd">
+<td>–Soft you now! The fair
+Ophelia!<br />
+Nymph, in thy orisons<br />
+Be all my sins remember’d.</td>
+<td><del>Saraswati Namostute ! Grant
+me Grace and Knowledge on How
+to Proceed!</del></td>
+</tr>
+</tbody>
+</table>
+
+Hamlet’s ‘To Be Or Not To Be’ Speech, Act 3 Scene 1
+
+Do you see a lot of “randomness” in that famous soliloquy? What do you
+reckon was Hamlet’s problem? In this soliloquy, Hamlet gives a list of
+all the *random* things that annoy him about life: *the whips and scorns
+of time*, *the oppressor’s wrong, the proud man’s contumely, the pangs
+of despised love, the law’s delay, the insolence of office and the
+spurns that patient merit of the unworthy takes*. There’s a sense of
+agonized frustration in this soliloquy that however bad life is we’re
+prevented from doing anything about it by fear of the unknown.
+
+And yet, being Prince of Denmark, and having a lot of Questions, and
+unmistakable Authority, he has to Act! How did he solve that problem? We
+don’t know for sure if Hamlet believed in Goddess Saraswati,
+<u>[Shakespeare doesn’t say, but Christopher Isherwood seems to think
+so, on Page
+3](https://www.yumpu.com/en/document/read/35825580/vedanta-for-the-western-world-swami-vivekananda)</u>.
+
+Aside: in Hindu mythology, who are the two who went into Hamlet’s *“the
+undiscover’d country”* and *did return*?
+<u>[She](https://www.heartfulnessmagazine.com/a-story-of-everlasting-love)</u>
+and <u>[he](https://www.templepurohit.com/story-nachiketa-yama/)</u>. But how
+did they manage it?
+
+Yes, they asked
+<u>[Questions](https://www.brainyquote.com/quotes/pablo_picasso_102018)</u>!
+
+## Suppose we were Hamlet….
+
+What would we want to know? What Questions would we have?
+
+- Who is our friend?
+- What is the chance that we will survive?
+- Who killed Dad?
+
+Did Hamlet have an idea, any suspicion, that he might have wanted to
+prove? Yes, he did, and that is why he *feigned madness*, so people
+would open up and tell him things, in an unguarded way. So there was
+<u>[**craft in his
+madness**](http://www.shakespeare-online.com/plays/hamlet/antichamlet.html)!!</u>
+
+So here Hamlet tells his friends, Horatio and Marcellus, what he is
+going to do, and swears them into silence:
+
+> Here as before. \[For the third time, Hamlet places his sword for the
+> others to swear upon\]  
+> Never, so help you mercy,  
+> How strange or odd soe’er I bear myself  
+> (As I perchance hereafter shall think meet  
+> To put an antic disposition on)  
+> That you at such time seeing me never shall,  
+> With arms encumbered thus, or thus head shaked,  
+> Or by pronouncing of some doubtful phrase  
+> As, “Well, we know,” or “We could an if we would,”  
+> And especially don’t say <u>[**Hakuna Matata,
+> Dude!!**](https://youtu.be/kaOIxll4LCA)</u>
+
+### A Hypothesis worthy of Hamlet
+
+So we know what *Hamlet* wanted to know, and how he planned to find out.
+
+What about us?
+
+If we wanted to know the truth of something, some guess, a hunch, or a
+**Hypothesis** that we had, then we would need to conduct an
+“Experiment”, rather like Hamlet did, without quite going or *feigning
+madness* of course. But there is a *Madness to/in the Method*, as we
+will see…
+
+<figure>
+<img src="https://www.statsref.com/HTML/ppdac.png" alt="“Design of Experiments - A Workflow: A Madness in the Method”" />
+<figcaption aria-hidden="true">“Design of Experiments - A Workflow: A Madness in the
+Method”</figcaption>
+</figure>
+
+From
+<u>[**StatsRef**](https://www.statsref.com/HTML/?statistics__statistical_analys.html)</u>
+:
+
+> The PPDAC summary table suggests a relatively linear flow from problem
+> definition/Hypothesis through to conclusions — this is typically not
+> the case. It is often better to see the process as cyclical, with a
+> series of feedback loops. A summary of a revised PPDAC approach is
+> shown in the diagram below. As can be seen, although the clockwise
+> sequence (1→5) applies as the principal flow, each stage may and often
+> will feed back to the previous stage.
+
+> In addition, it may well be beneficial to examine the process in the
+> reverse direction, starting with Problem definition and then examining
+> expectations as to the format and structure of the Conclusions
+> (without pre-judging the outcomes!). This procedure then continues,
+> step-by-step, in an anti-clockwise manner (e→a) determining the
+> implications of these expectations for each stage of the process.
+
+## Design of Experiments
+
+Let us pretend we are Hamlet and design a simple experiment to find out
+some “truth” (highly probable idea) that is important to us.
+
+### <u>[**No Free Hunch**](https://nofreehunch.org)</u>: Hypothesis Design
+
+We learnt a lot (new) words from Hamlet, didn’t we? How many do we
+remember? What Hypothesis could be make? What do we have a hunch about?
+
+Let us consider the <u>[**Short Term
+Memory(STM)**](Lawrence-ADesignofExperimentsWorkshopasanIntroductiontoStatistics.pdf)</u>
+of Foundation Students at SMI as our vehicle for testing similar
+Hypotheses.[^1]
+
+- STM scores are significantly different between students of Design
+  and those of Art (;-O)
+- STM is much better for those who use Windows as compared to those
+  who use Macs
+- Any other factors, not related to types of individuals, but more
+  like *parameters of STM itself*, also affect the STM scores, for
+  example:
+  - Word complexity (Syllables per Word)
+  - No of Words
+  - Exposure Time and Recall Time
+
+With the Guilford Divergent Thinking Test, you might consider:
+
+- Students who speak their Mother Tongue fluently score better in
+  Divergent Thinking Scores (Fluency, Flexibility, Elaboration,
+  Originality)
+- There is a significant difference in Guilford Scores between
+  students from “small towns” and those from metros.
+
+### Factors in Hypothesis
+
+In each of these Hypotheses, we can see that there are *binary* (Yes/No)
+(two-valued) parameters that are part of the test: `Art vs Design`,
+`Windows vs Mac`, `Speaks Mother Tongue or Not`, `Small Town vs Metro`,
+`Long vs Short List of Words`, `Short vs Long Words` and
+`Long vs Short Exposure`.
+
+If we want our experiment to be **fair** we must have:
+
+- Devise a test tool for each combination of binary parameters (*Test
+  Type*)
+- the **same number** of subjects for each Test Type
+- **randomly** select the people as *respondents* each Test Type
+
+We will choose one of these questions, or a similar one, and use the
+**PPDAC Method** to proceed with our Experiment. This paper by Lawrence
+to guide our Hypothesis Testing and the Design of our Experiment:
+
+<u>[**Lawrence - A Design of Experiments Workshop as an Introduction to
+Statistics -
+PDF**](Lawrence-ADesignofExperimentsWorkshopasanIntroductiontoStatistics.pdf)</u>).
+
+This is the paper describing a simple *Design of Experiments* workshop
+in class much like ours. We will try to mimic as much of this as we can.
+Do read through this in the evening today in preparation for our
+experiment.
+
+### Data Analysis-1: Comparison of STM Histograms using Excel and WTFcsv
+
+Once our test/survey is complete, let us collate all the data for all
+tests using this Excel <u>[**spreadsheet**](STM.xlsx)</u>, which we can
+place on Google Drive for the whole class. (This is for the STM
+Hypothesis; we can adapt this spreadsheet for any other hypothesis test
+with categorical factors andscores.)
+
+1.  Enter the data from all tests on the first sheet titled “RawData”
+    (the one with the warning)
+2.  Download and save as your own *named* local copy.
+3.  **Duplicate this data** on the sheet titled “Data Duplicated”. **Do
+    not touch** the “RawData” sheet again. Good Practice to not touch
+    original data!!
+4.  For each of the *factors* under consideration, we will need to stack
+    up STM scores from `\(2^3 = 8\)` tests, i.e. eight columns.
+5.  If we have three two-valued, categorical factors, we will get three
+    sets of stacked scores, each from a (shuffled) set of the tests.
+6.  Half the scores in these stacked columns will pertain to one *level*
+    of the factor, and the other half of the scores will pertain to the
+    other level. (This should remind you of the Karnaugh Map you may
+    have learnt in your digital logic courses in school.). See example
+    below: it shows how we can stack up the scores from *4* tests for
+    each *level* of the parameter *p1*.
+
+| scores | test |  p1   |  p2   |  p3   |
+|:------:|:----:|:-----:|:-----:|:-----:|
+|   20   |  A   | True  | Long  |  Big  |
+|   20   |  B   | True  | Long  | Small |
+|   20   |  C   | True  | Short |  Big  |
+|   20   |  D   | True  | Short | Small |
+|   20   |  E   | False | Long  |  Big  |
+|   20   |  F   | False | Long  | Small |
+|   20   |  G   | False | Short |  Big  |
+|   20   |  H   | False | Short | Small |
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+1.  We will set up each of these *two stacked-score columns* in Col A on
+    separate sheets, similar to the one shown in the sheet titled
+    “Permutation Test”. One sheet for each two-valued parameter.
+2.  Create *paired* Histograms for each of the two stacked-score columns
+    using WTFcsv, or Excel itself if you are confident. Ensure that
+    there are *TWO* Histograms: one for each value of the factor under
+    consideration.
+3.  Inspection of the shapes and locations of these paired Histograms
+    may give you an idea whether the factor under consideration has any
+    effect on STM scores or none.
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+
+4.  Save these 6 histograms as PNG files on your machines and use them
+    along with *Comic Generator* (discussed below) to tell the story of
+    your Hypothesis Testing.
+
+### Computing Parallel Worlds: The Permutation Test
+
+BTW, why did Gabbar Singh say to Kaalia and the others in Sholay,
+<u>[“Hum ko kuchh nahi pata”](https://youtu.be/chi9hsfYcDE)?</u> And then afterwards, “Kamal ho gaya”…why does he say that?
+
+What if we cannot trust our eyes to compare the pair-wise Histograms?
+If there was considerable overlap? Is there a better way? Can we fix this by playing another Childhood Game? Yes, with **a deck of cards**! But before we play with cards, some background:
+
+> From: ~~Gabbar Singh~~ Tim C. Hesterberg (2015) *What Teachers Should Know About the
+> Bootstrap: Resampling in the Undergraduate Statistics Curriculum*,
+> The American Statistician, 69:4, 371-386
+> DOI: 10.1080/00031305.2015.1089789
+
+> Student B. R. was annoyed by TV commercials. He suspected that there
+> were more commercials in the “basic” TV channels, the ones that come
+> with a cable TV subscription, than in the “extended” channels you pay
+> extra for. To check this, he collected the data shown in Table 1. He
+> measured an average of 9.21 minutes of commercials per half hour in
+> the basic channels, vs only 6.87 minutes in the extended channels.
+> This seems to support his hypothesis. But there is not much
+> data—perhaps the difference was just random. The poor guy could only
+> stand to watch 20 random half hours of TV. Actually, he didn’t even do
+> that—he got his girlfriend to watch half of it. (Are you as appalled
+> by the deluge of commercials as I am? This is per half-hour!)
+
+|  basic | extended |
+|-------:|---------:|
+|  6.950 |    3.383 |
+| 10.013 |    7.800 |
+| 10.620 |    9.416 |
+| 10.150 |    4.660 |
+|  8.583 |    5.360 |
+|  7.620 |    7.630 |
+|  8.233 |    4.950 |
+| 10.350 |    8.013 |
+| 11.016 |    7.800 |
+|  8.516 |    9.580 |
+
+    ## [1] 2.3459
+
+> The average difference in ad times between the two sets of TV channels
+> is 2.34.
+
+> How easy would it be for a difference of 2.34 minutes to occur just by
+> chance? To answer this, we suppose there really is no difference
+> between the two groups, that “basic” and “extended” are just labels.
+> So what would happen if we assign labels randomly? How often would a
+> difference like 2.34 occur?
+>
+> We’ll pool all twenty observations, **randomly** pick 10 of them to
+> label “basic” and label the rest “extended”, and compute the
+> difference in means between the two groups. We’ll repeat that many
+> times, say ten thousand, to get the *permutation distribution* shown
+> in Figure 1.
+
+| channel  |  times |
+|:---------|-------:|
+| basic    |  6.950 |
+| extended |  3.383 |
+| basic    | 10.013 |
+| extended |  7.800 |
+| basic    | 10.620 |
+| extended |  9.416 |
+| basic    | 10.150 |
+| extended |  4.660 |
+| basic    |  8.583 |
+| extended |  5.360 |
+| basic    |  7.620 |
+| extended |  7.630 |
+| basic    |  8.233 |
+| extended |  4.950 |
+| basic    | 10.350 |
+| extended |  8.013 |
+| basic    | 11.016 |
+| extended |  7.800 |
+| basic    |  8.516 |
+| extended |  9.580 |
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
+> The observed statistic 2.34 is also shown; the fraction of the
+> distribution to the right of that value (≥ 2.34) is the probability
+> that random labeling would give a difference that large. In this case,
+> the probability of this value ( area coloured in green ) is \< 0.005.
+>
+> It would be rare for a difference this large to occur by chance. We
+> have randomly tried “all possible chances” and are *hardly able to
+> achieve similar,* and the rarer something is, the more likely that
+> there is an underlying truth.
+>
+> And therefore we conclude there is a real difference between the
+> groups and that ad time is different between `basic` and `extended` TV
+> channels.
+
+### Data Analysis-2: Creating Parallel Worlds
+
+1.  We will execute on Permutation Test on one sheet step by step and
+    decide whether that factor had a significant *effect* on STM scores.
+2.  We **pretend** that there is no difference in scores whether the
+    factor is chosen on way or another.
+3.  We **mechanize this pretence** by lumping “both kinds” of scores
+    together and shuffle them and divide them, **randomly** into two
+    groups, and take the difference in scores.
+4.  We can do this, like we did with our Monte Carlo experiment, many
+    many times and calculate difference in scores each time. (It is like
+    inventing many parallel worlds)
+5.  If we look at the way these **randomly computed** scores are
+    distributed and **compare** with the one measurement we did see, we
+    can decide whether Mother Nature is up to something, or we are able
+    to mimic the Mom.
+6.  If we are **not** able to mimic Mom, then **Mom always knows** and
+    we bow to her and ascribe a significance to the factor under
+    consideration. Else, nope.
+7.  Replicate this test for the other (binary) factors.
+
+Apropos: how could we do this for non-binary factors …??!!!
+
+### Making a Data Comic out of our Experiment
+
+What have been our Conclusions with the Experiment? Let us take our
+Experiment and make a comic out of it: <u>**Data Comic Generator from
+Gramener** [(**Weblink**)](https://gramener.com/comicgen)</u>
+
+<br> {{% youtube "E_2hdZuugI8" %}} <br>
+
+### References
+
+1.  Randomized Trials:<br>
+
+{{% youtube "eGRd8jBdNYg" %}} <br>
+
+2.  <u><https://safetyculture.com/topics/design-of-experiments/></u>
+
+3.  A. J. Lawrance (1996) *A Design of Experiments Workshop as an Introduction to Statistics*, The American Statistician, 50:2, 156-158, DOI: 10.1080/00031305.1996.10474364. <u>[PDF](Lawrence-ADesignofExperimentsWorkshopasanIntroductiontoStatistics.pdf)</u>
+
+4.  Victoria Woodard (2023) *Five Hands-on Experiments for a Design of Experiments Course*, Journal of Statistics and Data Science Education, 31:3, 225-235, DOI: 10.1080/26939169.2023.2195889. <u>[PDF](Five%20Hands-on%20Experiments%20for%20a%20Design%20of%20Experiments%20Course.pdf)</u>
+
+5.  Tim C. Hesterberg (2015). *What Teachers Should Know About the Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, The American Statistician, 69:4, 371-386, DOI:10.1080/00031305.2015.1089789. <u>[PDF](hesterberg2015.pdf)</u>
+
+6.  Shuttleworth, M. (2009). What is the scientific method? Retrieved from <u><https://explorable.com/what-is-the-scientific-method></u>
+
+7.  Mahashweta Devi, *The Why Why Girl*,
+    <u><https://www.tulikabooks.com/picture-books/the-why-why-girl-english.html></u>,
+    read by Sarah Dryden Peterson
+    <u><https://www.youtube.com/watch?v=xNcV5DZhg4c></u>
+
+8.  Could this song indicate what our situation might be?
+
+    <u><https://www.youtube.com/watch?v=qan0Y9hXpPQ></u>
+
+    <u><https://www.filmyquotes.com/songs/1381></u>
+
+### Fun Stuff: Stat Lessons from `Sholay`
+
+{{% youtube "chi9hsfYcDE" %}}
+
+Gabbar: “Kitne Aadmi thay?  
+Stats Teacher: How many observations do you have? n \< 30 is a joke.  
+
+Gabbar: Kya Samajh kar aaye thay? Gabbar khus hoga? Sabaasi dega kya?  
+Stats Teacher: What are the levels in your Factors? Are they binary? Don’t do ANOVA just yet!  
+
+Gabbar: (Fires off three rounds ) Haan, ab theek hai!  
+Stats Teacher: Yes, now the dataset is balanced wrt the factor (Treatment and Control).  
+
+Gabbar: Is pistol mein teen zindagi aur teen maut bandh hai. Dekhte hain kisko kya milega.  
+Stats Teacher: This is our Research Question, for which we will Design an Experiment.  
+
+Gabbar: (Twirls the chambers of his revolver) “Hume kuchh nahi pataa!”  
+Stats Teacher: Let us perform a non-parametric Permutation Test for this Factor!  
+
+Gabbar: “Kamaal ho gaya!”  
+Stats Teacher: Fantastic! Our p-value is so small that we can reject the NULL Hypothesis!!  
+
+Go and like this post at: <u><https://www.linkedin.com/pulse/stat-lessons-from-sholay-arvind-venkatadri-wgtrf/?trackingId=c0b4UCTLRea6U%2Bj%2Bm4TCtw%3D%3D></u>
+
+### More Fun Stuff: Words Belong Hamlet
+
+Hamlet’s *To be or not to be* in Pidgin English <u>[Tok
+Pisin](https://www.hawaii.edu/satocenter/langnet/definitions/tokpisin.html)</u>!
+
+> Which way this time? Me killem de finish body b’long me. Or me no do
+> ’im? Me no savvy.  
+> Might ’e better ’long you-me catchem this fella, string for throw ’im
+> this fella arrow.  
+> Altogether b’long number one bad fella, name b’long him fortune? Me no
+> savvy.  
+> Might ’e better ’long you-me For fightem ’long altogether where him ’e
+> makem you-me sorry too much.  
+> Bimeby him fall down die finish? Me no savvy.
+
+[^1]: Or we could use <u>[Guilford Alternative Uses Creative
+    Test](https://curtbonk.com/bobweb/r546/modules/creativity/creativity_tests/guilford_uses_task.html)</u>
